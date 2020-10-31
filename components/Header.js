@@ -7,26 +7,26 @@ const entryPoint = document.querySelector('.header-container')
 
 function Header(){
     const headerDiv = document.createElement('div')
-    const spanHeader = document.createElement('span')
-    const spanTemp = document.createElement('span')
-    const hOne = document.createElement('h1')
-    
-    headerDiv.classList.add('header');
-    spanHeader.classList.add('date');
-    spanTemp.classList.add('temp');
-    
-    spanHeader.textContent = `March 28, 2020`;
-    spanTemp.textContent = `98`;
-    hOne.textContent = `Lambda Times`;
+        headerDiv.classList.add('header');
+        entryPoint.appendChild(headerDiv);
 
-        headerDiv.append(entryPoint);
-        headerDiv.appendChild(spanHeader);
+    const spanDate = document.createElement('span')
+        spanDate.classList.add('date');
+        spanDate.textContent = `March 28, 2020`;
+        headerDiv.appendChild(spanDate);
+
+    const hOne = document.createElement('h1')
+        hOne.textContent = `Lambda Times`;
         headerDiv.appendChild(hOne);
+
+    const spanTemp = document.createElement('span')
+        spanTemp.classList.add('temp');
+        spanTemp.textContent = `98`;
         headerDiv.appendChild(spanTemp)
 
     return headerDiv;
 }
-
+Header();
 
 //  <div class="header">
 //    <span class="date">MARCH 28, 2020</span>
